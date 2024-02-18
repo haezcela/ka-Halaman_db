@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <form id="add-crop-form">
+        <input type="text" name="type" placeholder="Crop Type" />
+        <input type="text" name="date" placeholder="Harvest Date" />
+        <button>Add Crop</button>
+      </form>
+
+      <ul id="crop-list"></ul>
+    </div>
+
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCotzSrU7iRJV685q8uceW5kve4kYGkhWA",
+        authDomain: "ka-halaman-505b5.firebaseapp.com",
+        projectId: "ka-halaman-505b5",
+        storageBucket: "ka-halaman-505b5.appspot.com",
+        messagingSenderId: "310047835427",
+        appId: "1:310047835427:web:face5a3286c95b10ed3896",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
